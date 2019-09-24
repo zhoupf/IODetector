@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/getStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Click to start"
+        android:textSize="25dp"
+        android:onClick="searchGPSButtonClick"/>
+
+    <TextView
+        android:id="@+id/showResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Detection Result"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"/>
+
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Settings and readings"
+            android:textSize="25dp" />
+    </ScrollView>
+
+    <GridLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_column="0"
+            android:id="@+id/indoor"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#ff6714"
+            android:text="Indoor (室内)"
+            android:textSize="20dp"
+            android:onClick="indoorMarker"/>
+
+        <Button
+            android:layout_column="0"
+            android:id="@+id/semioutdoor"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#ffce26"
+            android:text="Semi-outdoor (半遮蔽)"
+            android:textSize="20dp"
+            android:onClick="semiMarker"/>
+
+        <Button
+            android:layout_column="0"
+            android:id="@+id/outdoor"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#2cb457"
+            android:text="Outdoor (室外)"
+            android:textSize="20dp"
+            android:onClick="outdoorMarker"/>
+
+        <Button
+            android:layout_column="0"
+            android:id="@+id/unknown"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#00c3e3"
+            android:text="Unknown (未知)"
+            android:textSize="20dp"
+            android:onClick="unknownMarker"/>
+    </GridLayout>
+
+</LinearLayout>
