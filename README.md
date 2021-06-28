@@ -1,2 +1,2 @@
 # IODetector
- indoor outdoor detection for ele.me
+ indoor outdoor detection for Android devives
